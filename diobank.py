@@ -52,3 +52,6 @@ while True:
     elif opcao == "q":
         print("Agradecemos por ser nosso cliente. Até breve.")
         break
+        
+    else:
+        print("Operação inválida, por favor selecione novamente a operação desejada.")
