@@ -23,7 +23,7 @@ while True:
 
         if valor_deposito > 0:
             saldo += valor_deposito
-            extrato += f"Valor depositado de {valor_deposito:.2f} no dia {date.today()}"
+            extrato += f"Valor de depósito realizado foi de R$ {valor_deposito:.2f} no dia {date.today()}"
         else:
             print("Por favor, informe um valor acima de R$ 0.00 que seja válido")
 
@@ -32,7 +32,7 @@ while True:
 
         if valor_saque <= saldo and valor_saque <= limite and numero_saques <= LIMITE_SAQUES:
             saldo -= valor_saque
-            extrato += f"O valor sacado é de R$ {valor_saque:.2f} realizado dia {date.today()} "
+            extrato += f"\nO saque realizado foi de R$ {valor_saque:.2f} no dia {date.today()} "
             numero_saques += 1 
 
         else:
@@ -48,10 +48,10 @@ while True:
         print("Não foram realizadas movimentações." if not extrato else extrato)
         print(f"\nSaldo: R$ {saldo:.2f}")
         print("==========================================")
-    
+
     elif opcao == "q":
         print("Agradecemos por ser nosso cliente. Até breve.")
         break
-        
+
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
